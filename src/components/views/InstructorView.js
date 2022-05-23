@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import profileImage from "../../images/anonymous.jpg"
 
 const InstructorView = (props) => {
   const {instructor, editCourse, allCourses} = props;
@@ -7,8 +7,10 @@ const InstructorView = (props) => {
   let availableCourses = allCourses.filter(course => course.instructorId!==instructor.id);
   
   return (
-    <div>      
+    <div>
+      {instructor.imageUrl === null ? <img src={profileImage} alt="Default Image" /> : <img src={instructor.imageUrl} alt="Instructor's Image" />}
       <h1>{instructor.firstname}</h1>
+
       <h3>{instructor.department}</h3>
       <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
         <div>Assigned courses:

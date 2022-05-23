@@ -44,7 +44,10 @@ class NewInstructorContainer extends Component {
             redirectId: newInstructor.id
         });
     }
-
+    
+    componentWillUnmount() {
+        this.setState({ redirect: false, redirectId: null });
+    }
 
     render() {
         if (this.state.redirect) {

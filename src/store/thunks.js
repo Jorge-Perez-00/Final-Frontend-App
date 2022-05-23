@@ -48,7 +48,7 @@ export const addInstructorThunk = (instructor) => async (dispatch) => {
 //delete instructor
 export const deleteInstructorThunk = instructorId => async dispatch => {
   try {
-    await axios.delete(`${path}/instructor/${instructorId}`);
+    await axios.delete(`${path}/instructors/${instructorId}`);
     //delete succesful so change state with dispatch
     dispatch(ac.deleteInstructor(instructorId));
   } catch (err) {

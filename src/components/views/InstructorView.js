@@ -12,6 +12,10 @@ const InstructorView = (props) => {
       <h1>{instructor.firstname}</h1>
 
       <h3>{instructor.department}</h3>
+      <Link to={{ pathname:`/editinstructor`, state: instructor}}>
+        <button>Edit</button>
+      </Link>
+
       <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
         <div>Assigned courses:
         {assignedCourses.map( course => {

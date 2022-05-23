@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import { 
   fetchInstructorThunk,
   fetchAllCoursesThunk,
-  editCourseThunk 
+  editCourseThunk, 
+  editInstructorThunk
 } from "../../store/thunks";
 
 import { InstructorView } from "../views";

@@ -10,7 +10,8 @@ import {
   AllInstructorsContainer,
   AllCoursesContainer,
   NewCourseContainer,
-  NewInstructorContainer
+  NewInstructorContainer,
+  EditInstructorContainer
 } from './components/containers';
 
 // if you create separate components for adding/editing 
@@ -25,6 +26,7 @@ const App = () => {
         <Route exact path="/instructors" component={AllInstructorsContainer} />
         <Route exact path="/newinstructor" component={NewInstructorContainer} />
         <Route exact path="/instructor/:id" component={InstructorContainer} />
+        <Route exact path="/editinstructor" component={EditInstructorContainer} />
         <Route exact path="/courses" component={AllCoursesContainer} />
         <Route exact path="/newcourse" component={NewCourseContainer} />
         <Route exact path="/course/:id" component={CourseContainer} />

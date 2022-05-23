@@ -9,7 +9,8 @@ import {
   CourseContainer,
   AllInstructorsContainer,
   AllCoursesContainer,
-  NewCourseContainer
+  NewCourseContainer,
+  //NewInstructorContainer
 } from './components/containers';
 
 // if you create separate components for adding/editing 

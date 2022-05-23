@@ -33,12 +33,56 @@ export const fetchInstructorThunk = (id) => async (dispatch) => {
   }
 };
 
+//add instructor
+export const addInstructorThunk = (instructor) => async (dispatch) => {
+
+  try{
+    let res = await axios.post(`${path}/instructors`, instructor);
+    dispatch(ac.addInstructor(res.data));
+    return res.data;
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+//delete instructor
+export const deleteInstructorThunk = instructorId => async dispatch => {
+  try {
+    await axios.delete(`${path}/instructor/${instructorId}`);
+    //delete succesful so change state with dispatch
+    dispatch(ac.deleteInstructor(instructorId));
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+//edit instructor
+export const editInstructorThunk = instructor => async dispatch => {
+  try {
+    let res = await axios.put(`${path}/instructor/${instructor.id}`, instructor);
+    //res.data is the updated course object
+    dispatch(ac.editInstructor(res.data));
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 //All courses
 export const fetchAllCoursesThunk = () => async (dispatch) => {
   try {
     let res = await axios.get(`${path}/courses`);
     dispatch(ac.fetchAllCourses(res.data));
   } catch(err) {
+    console.error(err);
+  }
+};
+
+//Single course
+export const fetchCourseThunk = id => async dispatch => {
+  try {
+    let res = await axios.get(`${path}/courses/${id}`);
+    dispatch(ac.fetchCourse(res.data));
+  } catch (err) {
     console.error(err);
   }
 };
@@ -74,12 +118,4 @@ export const editCourseThunk = course => async dispatch => {
   }
 };
 
-//Single course
-export const fetchCourseThunk = id => async dispatch => {
-  try {
-    let res = await axios.get(`${path}/courses/${id}`);
-    dispatch(ac.fetchCourse(res.data));
-  } catch(err) {
-    console.error(err);
-  }
-};
+

@@ -4,7 +4,6 @@ import {
   fetchInstructorThunk,
   fetchAllCoursesThunk,
   editCourseThunk, 
-  editInstructorThunk
 } from "../../store/thunks";
 
 import { InstructorView } from "../views";

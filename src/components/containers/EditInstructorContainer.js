@@ -36,14 +36,11 @@ class EditInstructorContainer extends Component {
             imageUrl: this.state.imageUrl,
         };
 
-        //let newInstructor = await this.props.addInstructor(instructor);
-
         let instructorId = this.props.location.state.id
         await this.props.editInstructor({id: instructorId, ...instructor});
 
         this.setState({
             redirect: true,
-            //redirectId: newInstructor.id
         });
     }
 

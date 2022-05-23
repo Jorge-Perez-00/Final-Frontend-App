@@ -13,7 +13,6 @@ class NewCourseContainer extends Component {
           title: "", 
           timeslot: "",
           location: "", 
-          instructorId: null, 
           redirect: false, 
           redirectId: null
         };
@@ -32,7 +31,6 @@ class NewCourseContainer extends Component {
             title: this.state.title,
             timeslot: this.state.timeslot,
             location: this.state.location,
-            instructorId: this.state.instructorId
         };
         
         let newCourse = await this.props.addCourse(course);
@@ -41,7 +39,6 @@ class NewCourseContainer extends Component {
           title: this.state.title,
           timeslot: this.state.timeslot,
           location: this.state.location,
-          instructorId: null, 
           redirect: true, 
           redirectId: newCourse.id
         });

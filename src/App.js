@@ -14,12 +14,18 @@ import {
   EditInstructorContainer,
   EditCourseContainer,
 } from './components/containers';
-
 // if you create separate components for adding/editing 
 // a student or instructor, make sure you add routes to those
 // components here
 
 const App = () => {
+
+  document.body.style.backgroundColor = "#190b50"
+
+  /*
+  background: rgb(42, 10, 96);
+  background: linear-gradient(0deg, rgba(42, 10, 96, 1) 0%, rgba(14, 47, 71, 1) 100%);
+  */
   return (
     <div className="App">
       <Switch>

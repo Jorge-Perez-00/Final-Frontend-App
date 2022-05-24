@@ -1,0 +1,59 @@
+.courseTitle {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 10px;
+
+}
+
+.courseInfo {
+    color: white;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.courseInstructor {
+    color:purple;
+    font-size: 75px;
+    margin-top: 10px;
+
+}
+
+.editCourse {
+        font-size: 50px;
+        left: -600px;
+        margin-bottom: 50px;
+        margin-top: 5px;
+        border-radius: 25px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 15px;
+        background: rgb(79, 55, 186);
+        background: radial-gradient(circle, rgb(115, 88, 234) 0%, rgb(152, 75, 183) 100%);
+        cursor: pointer;
+        margin-left: 20px;
+        margin-right: 20px;
+}
+
+.editCourse:hover {
+    border-color: white;
+    color: white;   
+}
+
+.moveBackCourses {
+        font-size: 50px;
+        left: -600px;
+        margin-bottom: 50px;
+        margin-top: 5px;
+        border-radius: 25px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 15px;
+        background: rgb(79, 55, 186);
+        background: radial-gradient(circle, rgb(115, 88, 234) 0%, rgb(152, 75, 183) 100%);
+        cursor: pointer;
+        margin-left: 20px;
+        margin-right: 20px;
+}
+
+.moveBackCourses:hover {
+    border-color: white;
+    color: white;
+}

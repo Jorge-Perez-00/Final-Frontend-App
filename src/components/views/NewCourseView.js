@@ -5,31 +5,31 @@ const NewCourseView = (props) => {
   const {handleChange, handleSubmit } = props;
 
   return (
-    <div className="root">
+    <div className="main">
       <div className="formContainer">
         <div className="formTitle">
-          <h2 style={{fontWeight: 'bold', fontFamily: 'Courier, sans-serif', fontSize: '20px', color: '#11153e'}}>
+          <h1 className="title">
             New Course
-          </h2>
+          </h1>
         </div>
         <form style={{textAlign: 'center'}} onSubmit={(e) => handleSubmit(e)}>
-          <label style= {{color:'#11153e', fontWeight: 'bold'}}>Title: </label>
+          <label>Title: </label>
           <input type="text" name="title" onChange ={(e) => handleChange(e)} />
           <br/>
           <br/>
 
-          <label style={{color:'#11153e', fontWeight: 'bold'}}>Timeslot: </label>
+          <label>Timeslot: </label>
           <input type="text" name="timeslot" onChange={(e) => handleChange(e)} />
           <br/>
           <br/>
 
-          <label style={{ color: '#11153e', fontWeight: 'bold' }}>Location: </label>
+          <label>Location: </label>
           <input type="text" name="location" onChange={(e) => handleChange(e)} />
           <br />
           <br />
 
 
-          <button type="submit">
+          <button type="submit" className="submitButton">
             Submit
           </button>
           <br/>

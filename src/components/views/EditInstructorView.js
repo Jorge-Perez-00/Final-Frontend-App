@@ -4,35 +4,35 @@ const EditInstructorView = (props) => {
     const { handleChange, handleSubmit, firstname, lastname, department, imageUrl } = props;
 
     return (
-        <div className="root">
+        <div className="main">
             <div className="formContainer">
                 <div className="formTitle">
-                    <h2 style={{ fontWeight: 'bold', fontFamily: 'Courier, sans-serif', fontSize: '20px', color: '#11153e' }}>
+                    <h1 className="title">
                         Edit Instructor
-                    </h2>
+                    </h1>
                 </div>
                 <form style={{ textAlign: 'center' }} onSubmit={(e) => handleSubmit(e)}>
-                    <label style={{ color: '#11153e', fontWeight: 'bold' }}>First name: </label>
+                    <label>First name: </label>
                     <input type="text" name="firstName" defaultValue={firstname} onChange={(e) => handleChange(e)} />
                     <br />
                     <br />
 
-                    <label style={{ color: '#11153e', fontWeight: 'bold' }}>Last name: </label>
+                    <label>Last name: </label>
                     <input type="text" name="lastName" defaultValue={lastname} onChange={(e) => handleChange(e)} />
                     <br />
                     <br />
 
-                    <label style={{ color: '#11153e', fontWeight: 'bold' }}>Department: </label>
+                    <label>Department: </label>
                     <input type="text" name="department" defaultValue={department} onChange={(e) => handleChange(e)} />
                     <br />
                     <br />
 
-                    <label style={{ color: '#11153e', fontWeight: 'bold' }}>imageUrl: </label>
+                    <label>imageUrl: </label>
                     <input type="text" name="imageUrl" defaultValue={imageUrl} onChange={(e) => handleChange(e)} />
                     <br />
                     <br />
 
-                    <button type="submit">
+                    <button type="submit" className="submitButton">
                         Submit
                     </button>
                     <br />

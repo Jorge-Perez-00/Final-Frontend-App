@@ -1,16 +1,26 @@
-
-
 import { Link } from 'react-router-dom';
-
+import "../../css/HomePage.css"
 
 
 const HomePageView = () => {
+  const linkStyle = {
+    color: "transparent",
+  }
+
   return (
-    <div>
-      <h6>Final Project</h6>
-      <Link to={'/instructors'} > All Instructors </Link>
-      <Link to={'/courses'} > All Courses </Link>
+    <div className='main'>
       
+      <h1 className='homepageTitle'>HUNTER COLLEGE</h1>      
+      <Link to={'/instructors'} style={linkStyle}>
+        <button className='homeButtons'> <span className='text'>ALL INSTRUCTORS</span></button>
+      </Link>
+      <Link to={'/courses'} style={linkStyle} > 
+        <button className='homeButtons'>ALL COURSES</button> 
+      </Link>
+      
+     
+
+
     </div>
   );    
 }

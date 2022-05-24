@@ -1,0 +1,44 @@
+.homepageTitle {
+    border-bottom: 3px solid black;
+    background-color: #1E1D1E;
+    font-size: 75px;
+    color: white;
+    margin-top: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+}
+
+.homepageTitle:hover {
+    color: rgb(167, 6, 167);
+    border-bottom: 3px solid white;
+}
+
+
+
+.homeButtons {
+    font-size: 60px;
+    font-family: 'Lucida Grande', 'Helvetica', sans-serif;
+    font-style: normal;
+    border-radius: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 13px 24px;
+    color: white;
+    border-color: #BB86FC;
+    border-width: 5px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+    position: vertical;
+    text-align: center;
+}
+
+.homeButtons:hover {
+    border-color: aliceblue;
+    background-color: #1E1D1E;
+    color: #BB86FC;
+}

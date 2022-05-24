@@ -4,7 +4,126 @@
 
 img {
   margin-top: 10px;
-  width: 75px;
-  height: 75px;
+  width: 250px;
+  height: 250px;
   object-fit: fill;
+  border-radius: 85px;
+}
+
+.main {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  scroll-behavior: smooth;
+}
+
+.homeLinks {
+  border-bottom-color: black;
+}
+
+
+.instructors {
+  font-size: 30px;
+  color: white;
+  width: auto;
+  height: auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.instructorCourseLink {
+    font-size: 30px;
+    color: white;
+    width: auto;
+    height: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.instructorCourseLink:hover {
+  color: purple;
+}
+
+.newButtons {
+  font-size: 35px;
+  position: relative;
+  left: -600px;  
+  margin-bottom: 10px;
+  margin-top: 25px;
+  border-radius: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 15px;
+  background: rgb(79, 55, 186);
+  background: radial-gradient(circle, rgb(115, 88, 234) 0%, rgb(152, 75, 183) 100%);
+  cursor: pointer;
+}
+
+.newButtons:hover {
+  border-color: white;
+  color: white;
+
+}
+
+.newButtonCourse {
+  font-size: 35px;
+  position: relative;
+  left: -365px;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  border-radius: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 15px;
+  background: rgb(79, 55, 186);
+  background: radial-gradient(circle, rgb(115, 88, 234) 0%, rgb(152, 75, 183) 100%);
+  cursor: pointer;
+}
+
+.newButtonCourse:hover {
+  border-color: white;
+  color: white;
+}
+
+.content {
+    display: inline;
+}
+
+table {
+  font-size: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  
+}
+
+table, th, td {
+  border: 1px solid aliceblue;
+  background-color: #1E1D1E;
+  color: white;
+}
+
+th, td {
+  padding: 10px;
+  width: 500px;
+  height: 100px;
+  text-align: left;
+  border-radius: 5px;
+  border-left: transparent;
+  border-right: transparent;
+}
+
+.deleteButton {
+  font-size: 60px ;
+  width: 80px;
+  height:80px;
+  color: red;
+  background-color: #dab3b3;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: red;
+  color: white
+}
+
+.deleteCells {
+  text-align: center;
 }

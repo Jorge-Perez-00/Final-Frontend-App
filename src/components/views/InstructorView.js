@@ -1,41 +1,53 @@
 import { Link } from "react-router-dom";
 import profileImage from "../../images/anonymous.jpg"
+import "../../css/Instructor.css"
 
 const InstructorView = (props) => {
   const {instructor, editCourse, allCourses} = props;
   let assignedCourses = allCourses.filter(course => course.instructorId===instructor.id);
-  let availableCourses = allCourses.filter(course => course.instructorId!==instructor.id);
+  let availableCourses = allCourses.filter(course => course.instructorId!==instructor.id && course.instructorId === null);
   
-  return (
-    <div>
-      {instructor.imageUrl === null ? <img src={profileImage} alt="Default Image" /> : <img src={instructor.imageUrl} alt="Instructor's Image" />}
-      <h1>{instructor.firstname}</h1>
+  const linkStyle = {
+    color: "transparent",
+  }
 
-      <h3>{instructor.department}</h3>
-      <Link to={{ pathname:`/editinstructor`, state: instructor}}>
-        <button>Edit</button>
+  return (
+    <div className="main">
+      <Link to={`/`} style={linkStyle}>
+        <h1 className='homepageTitle'>HUNTER COLLEGE</h1>
+      </Link>
+      {instructor.imageUrl === null ? <img src={profileImage} alt="Default Image" /> : <img src={instructor.imageUrl} alt="Instructor's Image" />}
+      <h1 className="instructorName">{instructor.firstname}</h1>
+      <h3 className="instructorDepartment">{instructor.department}</h3>
+
+      <Link to={{ pathname: `/instructors`}} style={linkStyle}>
+        <button className="moveBack">Back to Instructors</button>
+      </Link>
+      <Link to={{ pathname:`/editinstructor`, state: instructor}} style={linkStyle}>
+        <button className="editInstructor">Edit Instructor</button>
       </Link>
 
-      <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
-        <div>Assigned courses:
+      <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}} className="courseLists">
+        <div className="courseDivs">Assigned courses:
         {assignedCourses.map( course => {
           return (
-            <div key={course.id}>
-            <Link to={`/course/${course.id}`}>
-              <h4>{course.title}</h4>
-            </Link>
-            <button onClick={() => editCourse({id:course.id, instructorId: null})}>x</button>
+            <div key={course.id} className="uniqueCourse">  
+              <Link to={`/course/${course.id}`} style={linkStyle}>
+                <h2 className="courseTitle">{course.title}</h2>
+              </Link>
+              <button onClick={() => editCourse({ id: course.id, instructorId: null })} className="editCourseDelete">x</button>          
             </div>
           );
-        })}</div>
-        <div>Available courses:
+        })}
+        </div>
+        <div className="courseDivs">Available courses:
         {availableCourses.map( course => {
           return (
-            <div key={course.id}>
-            <Link to={`/course/${course.id}`}>
-              <h4>{course.title}</h4>
-            </Link>
-            <button onClick={() => editCourse({id:course.id, instructorId: instructor.id})}>+</button>
+            <div key={course.id} className="uniqueCourse">
+              <Link to={`/course/${course.id}`} style={linkStyle}>
+                <h2 className="courseTitle">{course.title}</h2>
+              </Link>
+              <button onClick={() => editCourse({ id: course.id, instructorId: instructor.id })} className="editCourseAdd">+</button>
             </div>
           );
         })}</div>

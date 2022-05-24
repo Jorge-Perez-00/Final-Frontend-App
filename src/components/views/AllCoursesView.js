@@ -13,24 +13,41 @@ const AllCoursesView = (props) => {
     </div>
     );
   }
-  
+
+  const linkStyle = {
+    color: "transparent",
+  }
+
   return (
-    <div>
-      {courses.map((course) => {
-        let title = course.title;
-        return (
-          <div key={course.id}>
-          <Link to={`/course/${course.id}`}>
-            <h1>{title}</h1>
-          </Link>
-          <button onClick={() => deleteCourse(course.id)}>Delete</button>
-          </div>
-        );
-      }
-      )}
-      <Link to={`/newcourse`}>
-        <button>Add New Course</button>
+    <div className="main">
+      <Link to={`/`} style={linkStyle}>
+        <h1 className='homepageTitle'>HUNTER COLLEGE</h1>     
       </Link>
+      <Link to={`/newcourse`} style={linkStyle}>
+        <button className="newButtonCourse">Add New Course</button>
+      </Link>
+      <table>
+        <tr>
+          <th>Course</th>
+          <th></th>
+        </tr>
+        {courses.map((course) => {
+          let title = course.title;
+          return (
+            <tr key={course.id}>
+              <td>
+                <Link to={`/course/${course.id}`} style={linkStyle}>
+                  <h1 className="instructorCourseLink">{title}</h1>
+                </Link></td>
+              <td className="deleteCells">          
+                <button onClick={() => deleteCourse(course.id)} className="deleteButton">X</button>
+              </td>
+            </tr>
+          );
+        }
+        )}
+      </table>
+      
     </div>
   );
 };

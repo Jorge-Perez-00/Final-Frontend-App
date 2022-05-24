@@ -1,4 +1,4 @@
-# final-frontend
-
-starter code for CSCI 39548 final project
 # Final-Frontend-App
+
+No group members.
+

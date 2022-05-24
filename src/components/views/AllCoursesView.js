@@ -2,21 +2,28 @@ import { Link } from "react-router-dom";
 
 const AllCoursesView = (props) => {
   let {courses, deleteCourse} = props;
-  //courses = [{id: 300, title: "hello"}]
+
+
+  const linkStyle = {
+    color: "transparent",
+  }
+
   if (!courses.length) {
     return (
     <div>
-      <p>There are no courses.</p>
-      <Link to={`/newcourse`}>
-        <button>Add New Course</button>
+      <Link to={`/`} style={linkStyle}>
+        <h1 className='homepageTitle'>HUNTER COLLEGE</h1>
+      </Link>
+      <h2 style={{color: "white", fontSize: "50px"}}>There are no courses.</h2>
+
+        <Link to={`/newcourse`} style={linkStyle}>
+          <button className="newButtonCourse" style={{textAlign: 'center'}}>Add New Course</button>
       </Link>
     </div>
     );
   }
 
-  const linkStyle = {
-    color: "transparent",
-  }
+  
 
   return (
     <div className="main">

@@ -2,13 +2,26 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const AllInstructorsView = (props) => {
-  if (!props.allInstructors.length) {
-    return <div>There are no instructors.</div>;
-  }
 
   const linkStyle = {
     color: "transparent",
   }
+
+  if (!props.allInstructors.length) {
+    return (
+      <div>
+        <Link to={`/`} style={linkStyle}>
+          <h1 className='homepageTitle'>HUNTER COLLEGE</h1>
+        </Link>
+        <h2 style={{ color: "white", fontSize: "50px" }}>There are no instructors.</h2>
+        <Link to={`/newinstructor`} style={linkStyle}>
+          <button className="newButtons">Add New Instructor</button>
+        </Link>
+      </div>
+    )
+  }
+
+ 
 
   return (
     <div className="main">

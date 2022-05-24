@@ -18,6 +18,9 @@
 
 
 .courseTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
     color: white;
     display: inline-block;
 
@@ -27,25 +30,26 @@
 }
 
 .editCourseDelete {
-    font-size: 50px;
+    font-size: 55px;
     text-align: center;
-    width: 50px;
-    height: 60px;
-   
+    width: 60px;
+    height: auto;
     cursor: pointer;
     display: inline-block;
     margin-left: 30px;
+    padding: auto;
 }
 
 .editCourseAdd {
-    font-size: 50px;
+    font-size: 55px;
     text-align: center;
-    width: 50px;
-    height: 60px;
+    width: 60px;
+    height: auto;
 
     cursor: pointer;
     display: inline-block;
     margin-left: 30px;
+    padding: auto;
 }
 
 .editCourseDelete:hover {
@@ -60,6 +64,7 @@
 .uniqueCourse {
     background-color: black;
     height: auto;
+    width: auto;
     width: 500px;
     border-radius: 25px;
     margin-top: 15px;
@@ -110,4 +115,10 @@
 
 .courseLists {
     margin-bottom: 150px;
+}
+
+.message {
+    color: white;
+    font-size: 50px;
+    border-bottom: 3px solid white;
 }
